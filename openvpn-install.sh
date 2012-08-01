@@ -1,6 +1,7 @@
 #!/bin/bash
 #OpenVPN Server on CentOS OpenVZ VPS Script by Yasyf Mohamedali (http://blog.yasyf.com/2012/08/01/openvpn-server-on-a-centos-openvz-vps)
 #Adapted from various scripts around the net, including http://www.openvz.ca/blog/2010/11/18/setup-tuntap-openvpn-server-openvz-5-minutes/
+#https://gist.github.com/3230440
 tunstate=`cat /dev/net/tun`
 	if [ "$tunstate" = "cat: /dev/net/tun: Permission denied" ]
 	then 

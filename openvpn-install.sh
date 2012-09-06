@@ -16,7 +16,8 @@ wget http://repos.openvpn.net/repos/yum/conf/repos.openvpn.net-CentOS6-snapshots
 yum update
 yum -y install openvpn
 cd /etc/openvpn/
-cp -R /usr/share/doc/openvpn-2.*/easy-rsa/ /etc/openvpn/
+rsaLoc="$(cd /usr/share/doc/openvpn-2.*/easy-rsa/;pwd)/"
+cp -R $rsaLoc /etc/openvpn/
 cd /etc/openvpn/easy-rsa/2.0/
 chmod +rwx *
 source ./vars

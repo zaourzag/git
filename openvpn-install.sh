@@ -93,3 +93,5 @@ chkconfig dnsmasq on
 chkconfig openvpn on
 echo "OpenVPN has been installed
 Download ~/openvpn-keys.tgz archive and open the .ovpn file inside it in an OpenVPN Client Application"
+echo "Adapted ad Published By Yasyf Mohamedali (http://www.yasyf.com) at http://blog.yasyf.com/coding/openvpn-server-on-a-centos-openvz-vps"
+echo "If you found this useful, feel free to donate at http://blog.yasyf.com/donate"

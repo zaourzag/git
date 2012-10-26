@@ -83,7 +83,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 iptables -A FORWARD -s 10.8.0.0/255.255.255.0 -j ACCEPT 
 iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT 
-iptables -A -t nat POSTROUTING -s 10.8.0.0/255.255.255.0 -j SNAT --to-source $ip
+iptables -t nat -A POSTROUTING -s 10.8.0.0/255.255.255.0 -j SNAT --to-source $ip
 iptables-save > /etc/sysconfig/iptables
 sed -i 's/eth0/venet0/g' /etc/sysconfig/iptables
 yum install dnsmasq
